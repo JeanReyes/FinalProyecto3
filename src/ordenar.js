@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { configureDevtool } from 'mobx-react-devtools';
 
 class Ordenar extends Component{
-    actulaizarCantidad(evento){
-        console.log(evento);
+    actualizarCantidad(evento){
+        this.props.hacerPedido(this.props.indice, evento.target.value);
     }
     // quede en el video 9
     render(){
@@ -11,7 +11,7 @@ class Ordenar extends Component{
             <div>
                 <br/>
                 <label>Cantidad: </label>
-                <input onChange={this.actulaizarCantidad.bind(this)} type="number"/>
+                <input onChange={this.actualizarCantidad.bind(this)} type="number"/>
                 <label className="EspacioPlatillo">Precio: {this.props.precio}</label>
             </div>
         );

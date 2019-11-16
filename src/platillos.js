@@ -16,7 +16,7 @@ class Platillos extends Component {
                             <img role="presentation" src={logo} className="ImagenPlatillo"/>
                             <h2 className="TitlePlatillo">{platillo.nombre}</h2>
                             <div className="DescripcionPlatillo">{platillo.descripcion}</div>
-                            <Ordenar precio={platillo.precio}/>
+                            <Ordenar precio={platillo.precio} indice={index} hacerPedido={(indice_d, evento_d)=>{VarTiendaController.ponerEnLaOrden(indice_d, evento_d)}}/>
                         </div>
                     </div>
                 )
