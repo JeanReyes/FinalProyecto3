@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
-import App from './App';
+import { Router, Route, browserHistory } from 'react-router';
+
+// import Counter from './Counter';
+// import App from './App';
 import './index.css';
-import Lienzo from './lienzo'
+import Lienzo from './lienzo';
+
+// logica de las rutas
+const direcciones  =(
+  <Router history={browserHistory}>
+      <Route path="/" component={Lienzo} />
+    </Router>
+);
 
 ReactDOM.render(
-  <Lienzo/>,
+ direcciones,
   document.getElementById('root')
 );

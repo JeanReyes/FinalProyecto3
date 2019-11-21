@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Platillos from './platillos';
 import Pedidos from './pedidos';
+import Bebidas from './bebidas';
 
 class Lienzo extends Component{
     render(){
@@ -10,8 +11,9 @@ class Lienzo extends Component{
                     Nombre de Tienda
                 </div>
                 <div className="row">
-                    <Platillos/>
-                    <Pedidos/>    
+                    {/* <Platillos/> */}
+                    <Bebidas/> 
+                    <Pedidos/>   
                 </div>
 
             </div>
